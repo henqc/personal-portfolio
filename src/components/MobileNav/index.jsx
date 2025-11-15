@@ -2,16 +2,18 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navList } from "@/utils/constants";
 import { CiMenuFries } from "react-icons/ci";
-import { usePathname } from "next/navigation";
-import { Link as ScrollLink } from "react-scroll";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { use } from "react";
+import ScrollLink from "@/components/ScrollLink";
+import { useState } from "react";
 
 export default function MobileNav() {
-  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  const handleNavigate = () => {
+    setOpen(false);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-[32px] text-blue" />
       </SheetTrigger>
@@ -22,6 +24,7 @@ export default function MobileNav() {
             to="home"
             smooth={true}
             duration={500}
+            onNavigate={handleNavigate}
           >
             HC
           </ScrollLink>
@@ -34,6 +37,7 @@ export default function MobileNav() {
                 smooth={true}
                 duration={500}
                 key={index}
+                onNavigate={handleNavigate}
                 className={
                   "capitalize font-robotoSlab font-medium cursor-pointer hover:text-blue transition-all"
                 }
@@ -48,6 +52,7 @@ export default function MobileNav() {
           to="contact"
           smooth={true}
           duration={500}
+          onNavigate={handleNavigate}
         >
           Get in Contact
         </ScrollLink>

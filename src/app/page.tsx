@@ -1,30 +1,33 @@
 "use client";
 import Bio from "@/components/Bio";
-import Projects from "@/components/Projects";
 import Home from "@/components/Home";
-import Experience from "@/components/Experience";
-import Contact from "@/components/Contact";
 import SKillHeader from "@/components/SkillHeader";
-import ProjetHeader from "@/components/ProjectsHeader";
-import { useCallback, useEffect } from "react";
-import Lenis from "lenis";
+import WorkExperienceHeader from "@/components/WorkExperienceHeader";
+import dynamic from "next/dynamic";
+
+const WorkExperience = dynamic(() => import("@/components/WorkExperience"), {
+  loading: () => null,
+});
+const Experience = dynamic(() => import("@/components/Experience"), {
+  loading: () => null,
+});
+const ProjetHeader = dynamic(() => import("@/components/ProjectsHeader"), {
+  loading: () => null,
+});
+const Projects = dynamic(() => import("@/components/Projects"), {
+  loading: () => null,
+});
+const Contact = dynamic(() => import("@/components/Contact"), {
+  loading: () => null,
+});
+
 export default function Portfolio() {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    window.history.scrollRestoration = "manual";
-  }, []);
   return (
     <div className="overflow-clip">
       <Home />
       <Bio />
+      <WorkExperienceHeader />
+      <WorkExperience />
       <SKillHeader />
       <Experience />
       <ProjetHeader />

@@ -1,6 +1,72 @@
-import { skills } from "@/utils/constants";
 import { useScroll, motion, MotionValue, useTransform } from "framer-motion";
 import { useRef } from "react";
+import {
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaAws,
+  FaPython,
+  FaJava,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiMongodb,
+  SiCplusplus,
+  SiPytorch,
+} from "react-icons/si";
+
+const skills = [
+  {
+    icon: FaJs,
+    name: "Javascript",
+  },
+  {
+    icon: FaReact,
+    name: "ReactJs",
+  },
+  {
+    icon: FaNodeJs,
+    name: "NodeJs",
+  },
+  {
+    icon: SiTypescript,
+    name: "Typescript",
+  },
+  {
+    icon: SiNextdotjs,
+    name: "Nextjs",
+  },
+  {
+    icon: SiTailwindcss,
+    name: "Tailwind",
+  },
+  {
+    icon: SiMongodb,
+    name: "MongoDB",
+  },
+  {
+    icon: FaAws,
+    name: "AWS",
+  },
+  {
+    icon: FaPython,
+    name: "Python",
+  },
+  {
+    icon: FaJava,
+    name: "Java",
+  },
+  {
+    icon: SiCplusplus,
+    name: "C++",
+  },
+  {
+    icon: SiPytorch,
+    name: "PyTorch",
+  },
+];
 
 export default function Experience() {
   const container = useRef(null);
@@ -21,7 +87,7 @@ export default function Experience() {
       <motion.div
         id="logos-slide"
         style={{ left, x }}
-        className="flex flex-row relative whitespace-nowrap"
+        className="flex flex-row relative whitespace-nowrap will-change-transform"
       >
         <Slide />
         <Slide />
@@ -50,7 +116,10 @@ export default function Experience() {
   return (
     <div id="skills" className="section">
       <div className="h-full px-0">
-        <div ref={container} className="flex flex-col gap-4">
+        <div
+          ref={container}
+          className="flex flex-col gap-8 md:gap-10 lg:gap-8 xl:gap-12"
+        >
           <Slider left="-55%" progress={scrollYProgress} direction={"left"} />
           <Slider left="-15%" progress={scrollYProgress} direction={"right"} />
           <Slider left="-40%" progress={scrollYProgress} direction={"left"} />

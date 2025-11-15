@@ -51,6 +51,6 @@
     @apply py-8 xl:py-24 min-h-screen flex items-center;
   }
   .section-sm {
-    @apply py-8 xl:py-24 min-h-[300px] flex items-center;
+    @apply py-6 md:py-8 lg:py-12 xl:py-24 min-h-[300px] flex items-center;
   }
 }

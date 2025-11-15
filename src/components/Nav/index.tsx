@@ -1,12 +1,9 @@
 "use client";
 import { navList } from "@/utils/constants";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { Link as ScrollLink } from "react-scroll";
+import ScrollLink from "@/components/ScrollLink";
 import "@/app/globals.css";
 
 export default function Nav() {
-  const pathname = usePathname();
   return (
     <nav className="flex gap-8">
       {navList.map((link, index) => {

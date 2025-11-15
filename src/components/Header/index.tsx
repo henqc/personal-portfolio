@@ -4,31 +4,35 @@ import { Button } from "@/components/ui/button";
 import MobileNav from "@/components/MobileNav";
 import Nav from "@/components/Nav";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import Link from "next/link";
-import { Link as ScrollLink } from "react-scroll";
+import ScrollLink from "@/components/ScrollLink";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import "@/app/globals.css";
 
 export default function Header() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    if (previous && latest > previous && latest > 100) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  });
+  const handleScrollChange = useCallback(
+    (latest: number) => {
+      const previous = scrollY.getPrevious();
+      if (previous && latest > previous && latest > 100) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+    },
+    [scrollY]
+  );
+
+  useMotionValueEvent(scrollY, "change", handleScrollChange);
 
   return (
     <motion.header
       variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="py-8 text-white fixed w-full z-50 xl:bg-[#27272c] xl:bg-opacity-80 xl:bg-clip-padding xl:blur-backdrop-filter"
+      className="py-8 text-white fixed w-full z-50 xl:bg-[#27272c] xl:bg-opacity-80 xl:bg-clip-padding xl:blur-backdrop-filter will-change-transform"
     >
       <div className="container mx-auto flex justify-between items-center">
         <ScrollLink

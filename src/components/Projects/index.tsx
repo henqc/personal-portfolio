@@ -1,8 +1,8 @@
 "use client";
 import { projectList } from "@/utils/constants";
-import { motion, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 import Card from "@/components/Card";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function Projects() {
   const container = useRef(null);

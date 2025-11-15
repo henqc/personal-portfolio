@@ -34,8 +34,12 @@ export default function Home() {
                 variants={fadein({ direction: "up", delay: 0.3 })}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{ once: true, amount: 0.7 }}
-                className="h1 gradient-text text-transparent animate-gradient"
+                viewport={{
+                  once: true,
+                  amount: 0.2,
+                  margin: "0px 0px -100px 0px",
+                }}
+                className="h1 gradient-text text-transparent animate-gradient will-change-transform"
               >
                 Henry Chen
               </motion.span>
@@ -44,19 +48,24 @@ export default function Home() {
               variants={fadein({ direction: "up", delay: 0.5 })}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: true, amount: 0.7 }}
-              className="max-w-[500px] mb-9 text-white"
+              viewport={{
+                once: true,
+                amount: 0.2,
+                margin: "0px 0px -100px 0px",
+              }}
+              className="max-w-[500px] mb-6 md:mb-8 xl:mb-9 text-white will-change-transform px-4 md:px-0"
             >
-              A passionate computer science student with an interest in
-              full-stack development and artificial intelligence. Constantly
-              learning, building, and pushing boundries.
+              A passionate computer science student with an interest in full
+              stack development, natural language processing, and agentic
+              systems. Constantly learning, building, and pushing boundaries.
             </motion.p>
           </div>
           <motion.div
             variants={fadein({ direction: "up", delay: 0.3 })}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.2, margin: "0px 0px -100px 0px" }}
+            className="will-change-transform mt-4 md:mt-6 xl:mt-0"
           >
             <Photo />
           </motion.div>

@@ -10,6 +10,8 @@ const gambarino = localFont({
     },
   ],
   variable: "--font-gambarino",
+  display: "swap",
+  preload: true,
 });
 
 const robotoslab = localFont({
@@ -19,6 +21,8 @@ const robotoslab = localFont({
     },
   ],
   variable: "--font-roboto-slab",
+  display: "swap",
+  preload: true,
 });
 
 const robotoslablight = localFont({
@@ -28,10 +32,12 @@ const robotoslablight = localFont({
     },
   ],
   variable: "--font-roboto-slab-light",
+  display: "swap",
+  preload: false, // Don't preload the light variant
 });
 
 export const metadata: Metadata = {
-  title: "Henrys Portfolio",
+  title: "Henry's Portfolio",
   description: "A minimalist JS portfolio",
 };
 

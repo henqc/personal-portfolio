@@ -1,25 +1,11 @@
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-  FaAws,
-  FaPython,
-  FaJava,
-} from "react-icons/fa";
-import {
-  SiTypescript,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiMongodb,
-} from "react-icons/si";
-
 export const navList = [
   {
     label: "About Me",
     path: "aboutme",
+  },
+  {
+    label: "Experience",
+    path: "experience",
   },
   {
     label: "Skills",
@@ -107,57 +93,38 @@ export const socialIcons = [
   },
 ];
 
-export const skills = [
+export interface WorkExperience {
+  company: string;
+  role: string;
+  location: string;
+  dateRange: string;
+  description: string[];
+  logo?: string;
+}
+
+export const workExperiences: WorkExperience[] = [
   {
-    icon: FaHtml5,
-    name: "Html5",
+    company: "Amazon Web Services",
+    role: "Software Development Intern",
+    location: "Portland, OR",
+    dateRange: "Fall 2025",
+    description: [
+      "Architected a threat intelligence pipeline using GuardDuty and CloudTrail across 1.5M+ AWS accounts to extract malicious IPs and transmit via S3 to AWS Shield, achieving < 1 minutes response time and 95% classification success",
+      "Engineered an event-driven workflow with AWS Step Functions and AWS Lambda to process 200+ fraud events daily",
+      "Validated pipeline efficacy with a CloudWatch dashboard tracking submission volumes and true positives via Athena",
+    ],
+    logo: "/aws-logo.png",
   },
   {
-    icon: FaCss3,
-    name: "Css3",
-  },
-  {
-    icon: FaJs,
-    name: "Javascript",
-  },
-  {
-    icon: FaReact,
-    name: "ReactJs",
-  },
-  {
-    icon: FaFigma,
-    name: "Figma",
-  },
-  {
-    icon: FaNodeJs,
-    name: "NodeJs",
-  },
-  {
-    icon: SiTypescript,
-    name: "Typescript",
-  },
-  {
-    icon: SiNextdotjs,
-    name: "Nextjs",
-  },
-  {
-    icon: SiTailwindcss,
-    name: "Tailwind",
-  },
-  {
-    icon: SiMongodb,
-    name: "MongoDB",
-  },
-  {
-    icon: FaAws,
-    name: "AWS",
-  },
-  {
-    icon: FaPython,
-    name: "Python",
-  },
-  {
-    icon: FaJava,
-    name: "Java",
+    company: "Capital One",
+    role: "Software Development Intern",
+    location: "Dallas, TX",
+    dateRange: "Summer 2025",
+    description: [
+      "Developed a semantic search engine through fine-tuning BERT models, boosting search relevance by 80%",
+      "Trained a BERT-based NER model on 10k+ examples to extract filter tags from queries with a 97% extraction rate",
+      "Enabled semantic understanding by authoring custom descriptors for filter tags, embedding them into a 768-dim vector space, and performing vector queries to find the most correlated filters tags, achieving 89% top-3 retrieval accuracy",
+    ],
+    logo: "/capitalone-logo.png",
   },
 ];
