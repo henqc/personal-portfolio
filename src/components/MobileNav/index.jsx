@@ -22,8 +22,6 @@ export default function MobileNav() {
           <ScrollLink
             className="font-gambarino cursor-pointer"
             to="home"
-            smooth={true}
-            duration={500}
             onNavigate={handleNavigate}
           >
             HC
@@ -34,13 +32,9 @@ export default function MobileNav() {
             return (
               <ScrollLink
                 to={link.path}
-                smooth={true}
-                duration={500}
                 key={index}
                 onNavigate={handleNavigate}
-                className={
-                  "capitalize font-robotoSlab font-medium cursor-pointer hover:text-blue transition-all"
-                }
+                className="navLink"
               >
                 {link.label}
               </ScrollLink>
@@ -48,10 +42,8 @@ export default function MobileNav() {
           })}
         </nav>
         <ScrollLink
-          className="capitalize text-center font-robotoSlab font-medium cursor-pointer hover:text-blue transition-all"
+          className="navLink text-center"
           to="contact"
-          smooth={true}
-          duration={500}
           onNavigate={handleNavigate}
         >
           Get in Contact

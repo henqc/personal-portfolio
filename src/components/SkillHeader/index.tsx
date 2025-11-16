@@ -1,15 +1,16 @@
 import { fadein } from "@/utils/fadein";
 import { motion } from "framer-motion";
+import { defaultViewport } from "@/utils/viewport";
 
 export default function SkillHeader() {
   return (
-    <div className="flex justify-center items-center flex-col gap-10 mt-12 md:mt-0">
+    <div className="flex justify-center items-center flex-col gap-6 md:gap-10 mt-0">
       <motion.div
         variants={fadein({ direction: "up" })}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }}
-        className="font-gambarino h01 underline decoration-blue underline-offset-8 md:no-underline"
+        viewport={defaultViewport}
+        className="sectionHeader"
       >
         What I Use{" "}
         <span className="text-blue font-bold hidden md:inline">/</span>{" "}

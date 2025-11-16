@@ -10,12 +10,8 @@ export default function Nav() {
         return (
           <ScrollLink
             to={link.path}
-            smooth={true}
-            duration={500}
             key={index}
-            className={
-              "capitalize font-robotoSlab font-medium cursor-pointer hover:text-blue transition-all"
-            }
+            className="navLink"
           >
             {link.label}
           </ScrollLink>

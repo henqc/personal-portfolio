@@ -38,8 +38,6 @@ export default function Header() {
         <ScrollLink
           className="cursor-pointer"
           to="home"
-          smooth={true}
-          duration={500}
         >
           <h1 className="text-4xl font-gambarino">HC</h1>
         </ScrollLink>
@@ -48,8 +46,6 @@ export default function Header() {
           <ScrollLink
             className="cursor-pointer"
             to="contact"
-            smooth={true}
-            duration={500}
           >
             <Button className="font-robotoSlab text-white font-medium">
               Get in Contact

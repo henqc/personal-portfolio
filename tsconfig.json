@@ -29,8 +29,7 @@
     ".next/types/**/*.ts",
     "src/components/MobileNav/index.jsx",
     "src/components/Icons/index.jsx",
-    "src/components/Photo/index.tsx",
-    "src/utils/activescroll.ts"
+    "src/components/Photo/index.tsx"
   ],
   "exclude": ["node_modules"]
 }

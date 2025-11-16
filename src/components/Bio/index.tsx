@@ -77,9 +77,10 @@ export default function Bio() {
                 >
                   When I&apos;m not immersed in writing code or learning about
                   the latest technologies, you can find me enjoying video games
-                  or playing sports with friends. I believe in maintaining a
-                  healthy work-life balance to bring my best self to every
-                  project.
+                  or playing sports with friends. I&apos;m a long-time
+                  first-person shooter enjoyer and former collegiate Valorant
+                  player. Lately, I have been channeling that competitive drive
+                  into my new obsession: pickleball.
                 </motion.p>
               </div>
             </div>

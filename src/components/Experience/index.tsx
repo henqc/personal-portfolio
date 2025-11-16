@@ -114,11 +114,11 @@ export default function Experience() {
   };
 
   return (
-    <div id="skills" className="section">
+    <div id="skills" className="section py-0 md:py-8 xl:py-24 min-h-[67vh] md:min-h-screen">
       <div className="h-full px-0">
         <div
           ref={container}
-          className="flex flex-col gap-8 md:gap-10 lg:gap-8 xl:gap-12"
+          className="flex flex-col gap-5 md:gap-10 lg:gap-8 xl:gap-12"
         >
           <Slider left="-55%" progress={scrollYProgress} direction={"left"} />
           <Slider left="-15%" progress={scrollYProgress} direction={"right"} />

@@ -6,6 +6,7 @@ import Photo from "@/components/Photo";
 
 import { motion } from "framer-motion";
 import { fadein } from "@/utils/fadein";
+import { defaultViewport } from "@/utils/viewport";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
               variants={fadein({ direction: "up", delay: 0.1 })}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: true, amount: 0.7 }}
+              viewport={defaultViewport}
               className="text-xl"
             >
               Software Developer
@@ -26,7 +27,7 @@ export default function Home() {
               variants={fadein({ direction: "up", delay: 0.2 })}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: true, amount: 0.7 }}
+              viewport={defaultViewport}
               className="h2 font-gambarino"
             >
               Hello I&apos;m <br />{" "}

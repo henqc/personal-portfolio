@@ -1,6 +1,7 @@
 import Icon from "@/components/Icons";
 import { fadein } from "@/utils/fadein";
 import { motion } from "framer-motion";
+import { defaultViewport } from "@/utils/viewport";
 
 export default function Contact() {
   return (
@@ -12,7 +13,7 @@ export default function Contact() {
         variants={fadein({ direction: "up", delay: 0.3 })}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }}
+        viewport={defaultViewport}
         className="font-gambarino h0 underline underline-offset-[20px] decoration-blue decoration-2"
       >
         Get in Touch
@@ -21,7 +22,7 @@ export default function Contact() {
         variants={fadein({ direction: "up", delay: 0.3 })}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }}
+        viewport={defaultViewport}
       >
         <Icon
           containerStyles="flex gap-6"

@@ -82,6 +82,7 @@ export default function WorkExperience() {
                               src={exp.logo}
                               alt={`${exp.company} logo`}
                               fill
+                              priority
                               className={`object-contain ${
                                 exp.company === "Capital One" ? "p-1" : "p-2"
                               }`}

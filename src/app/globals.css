@@ -26,6 +26,12 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
   }
+  .navLink {
+    @apply capitalize font-robotoSlab font-medium cursor-pointer hover:text-blue transition-all;
+  }
+  .sectionHeader {
+    @apply font-gambarino h01 underline decoration-blue underline-offset-8 md:no-underline;
+  }
 }
 
 @layer base {
@@ -49,8 +55,5 @@
   }
   .section {
     @apply py-8 xl:py-24 min-h-screen flex items-center;
-  }
-  .section-sm {
-    @apply py-6 md:py-8 lg:py-12 xl:py-24 min-h-[300px] flex items-center;
   }
 }
