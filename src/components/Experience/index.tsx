@@ -114,7 +114,10 @@ export default function Experience() {
   };
 
   return (
-    <div id="skills" className="section py-0 md:py-8 xl:py-24 min-h-[67vh] md:min-h-screen">
+    <div
+      id="skills"
+      className="section py-0 md:py-8 xl:py-24 min-h-[67vh] md:min-h-screen"
+    >
       <div className="h-full px-0">
         <div
           ref={container}

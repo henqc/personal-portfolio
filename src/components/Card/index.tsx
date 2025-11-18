@@ -28,7 +28,7 @@ export default function Card(card: {
         }}
         className="w-full h-auto min-h-[500px] md:min-h-[550px] xl:h-[600px] rounded-3xl flex flex-col xl:flex-row items-center justify-between p-6 md:p-8 lg:p-10 xl:p-10 relative will-change-transform"
       >
-        <div className="flex flex-col xl:flex-row gap-4 md:gap-5 xl:gap-4 xl:w-[40%] items-center xl:items-start w-full xl:w-auto">
+        <div className="flex flex-col xl:flex-row gap-4 md:gap-5 xl:gap-4 xl:w-[40%] items-center xl:items-start w-full xl:w-auto xl:mr-8">
           <div className="font-robotoSlab text-blue">{card.num}</div>
           <div className="flex flex-col gap-3 md:gap-4 text-center xl:text-left font-robotoSlab w-full xl:w-auto">
             <div className="h3 font-gambarino mb-4 md:mb-5 xl:mb-[20px] underline underline-offset-8 decoration-blue">
@@ -50,7 +50,7 @@ export default function Card(card: {
             </Link>
           </div>
         </div>
-        <div className="w-full max-w-[300px] md:max-w-[400px] xl:max-w-none h-[200px] md:h-[250px] xl:w-[55%] xl:h-[80%] relative overflow-hidden rounded-3xl mt-4 md:mt-6 xl:mt-0">
+        <div className="w-full max-w-[300px] md:max-w-[400px] xl:max-w-[500px] h-[200px] md:h-[250px] xl:h-[450px] xl:w-[500px] flex-shrink-0 relative overflow-hidden rounded-3xl mt-4 md:mt-6 xl:mt-0">
           <Image
             src={card.src}
             priority={card.i === 0}
@@ -58,7 +58,7 @@ export default function Card(card: {
             fill
             alt={`${card.title} project screenshot`}
             className="object-cover"
-            sizes="(max-width: 640px) 300px, (max-width: 768px) 400px, (max-width: 1280px) 50vw, 55vw"
+            sizes="(max-width: 640px) 300px, (max-width: 768px) 400px, 500px"
           />
         </div>
       </motion.div>

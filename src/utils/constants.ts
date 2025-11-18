@@ -19,20 +19,20 @@ export const navList = [
 
 export const projectList = [
   {
-    title: "Runway",
+    title: "TalkPilot",
     description:
-      "An exclusive network of the top university students in business development and engineering",
-    src: "/Runway.png",
+      "An agentic voice-activated browser assistant that enables hands-free web browsing through voice commands",
+    src: "/talk_pilot.png",
     skills: ["Python", "R", "React"],
-    link: "https://www.joinrunway.io/",
+    link: "https://github.com/henqc/talk-pilot-v2",
     color: "#27272c",
     num: "01.",
   },
   {
-    title: "Green Whistle",
+    title: "CUDA Image Filtering",
     description:
-      "Empowering ethical insiders to confidentially expose environmental misconduct",
-    src: "/GreenWhistle.png",
+      "A GPU-accelerated image filtering library using CUDA to apply various image filters such as blur, edge detection, and more",
+    src: "/image-filter.jpg",
     skills: [
       "NextJS",
       "Tailwind",
@@ -40,15 +40,15 @@ export const projectList = [
       "AWS Dynamo/S3/EC2",
       "Java Spring",
     ],
-    link: "https://github.com/henqc/WhistleblowingApp",
+    link: "https://github.com/henqc/cuda-image-filters",
     color: "#27272c",
     num: "02.",
   },
   {
-    title: "SpotiRecc",
+    title: "Miro MCP",
     description:
-      "Effortlessly discover new music tailored to your Spotify tastes",
-    src: "/SpotiRecc.png",
+      "A standalone Model Context Protocol server that enables any MCP-compatible LLM to interact with Miro whiteboards",
+    src: "/miro.png",
     skills: [
       "NextJS",
       "Tailwind",
@@ -56,15 +56,15 @@ export const projectList = [
       "AWS Dynamo/S3/EC2",
       "Java Spring",
     ],
-    link: "https://github.com/henqc/Spotify-Dash",
+    link: "https://github.com/henqc/miro-mcp",
     color: "#27272c",
     num: "03.",
   },
   {
-    title: "Movie Metrics",
+    title: "FundHer",
     description:
-      "Uncover cinematic insights and explore movie trends across the decades",
-    src: "/MovieMetric.png",
+      "Explore an NLP-powered, curated list of funding opportunities and unlock new possibilities for your education and career",
+    src: "/fund-her.png",
     skills: [
       "NextJS",
       "Tailwind",
@@ -72,7 +72,7 @@ export const projectList = [
       "AWS Dynamo/S3/EC2",
       "Java Spring",
     ],
-    link: "https://github.com/henqc/plotly-dash",
+    link: "https://devpost.com/software/fundher?_gl=1*11s1ccn*_gcl_au*NTQ4NDc3MzEwLjE3NDMzNDc3Mzc.*_ga*MTU5ODM0NzA1My4xNzQzMzQ3NzM4*_ga_0YHJK3Y10M*czE3NTAwMzMxMTUkbzkkZzAkdDE3NTAwMzMxMTUkajYwJGwwJGgw",
     color: "#27272c",
     num: "04.",
   },
@@ -123,7 +123,7 @@ export const workExperiences: WorkExperience[] = [
     description: [
       "Developed a semantic search engine through fine-tuning BERT models, boosting search relevance by 80%",
       "Trained a BERT-based NER model on 10k+ examples to extract filter tags from queries with a 97% extraction rate",
-      "Enabled semantic understanding by authoring custom descriptors for filter tags, embedding them into a 768-dim vector space, and performing vector queries to find the most correlated filters tags, achieving 89% top-3 retrieval accuracy",
+      "Enabled semantic understanding by authoring custom descriptors for filter tags, embedding them into a 768-dim vector space, and performing vector queries to find the most correlated filter tags, achieving 89% top-3 retrieval accuracy",
     ],
     logo: "/capitalone-logo.png",
   },
