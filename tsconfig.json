@@ -26,10 +26,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/components/MobileNav/index.jsx",
-    "src/components/Icons/index.jsx",
-    "src/components/Photo/index.tsx"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
