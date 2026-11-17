@@ -84,8 +84,9 @@ export default function Home() {
             <div className="track">
               {projects.map(({ title, tag, href, image }) => (
                 <a key={title} className="project glass" href={href} {...newTab}>
-                  {/* eager: inside the clipped, transformed track native lazy-loading only fires once a card is on screen */}
-                  <Image src={image} alt="" sizes="(max-width: 640px) 78vw, (max-width: 1034px) 58vw, 600px" loading="eager" />
+                  {/* eager: inside the clipped, transformed track native lazy-loading only fires once a card is on screen.
+                      sizes is ~1.6x the card's layout width because the perspective tilt draws near cards that much larger. */}
+                  <Image src={image} alt="" sizes="(max-width: 640px) 90vw, (max-width: 1034px) 93vw, 960px" loading="eager" />
                   <p>
                     {title}{" "}
                     <span>
